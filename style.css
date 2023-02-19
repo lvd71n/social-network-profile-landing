@@ -1,0 +1,274 @@
+html {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 209px; 
+  margin-top: 40px;
+  margin-bottom: 44px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: right;
+  width: 935px;
+  margin-left: 15%;
+}
+
+.app-nav {
+  display: flex;
+  flex-direction: column;
+  width: 245px;
+  height: 100vh;
+  padding: 1em 2em 1em 1em;
+  border-width: 0;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.app-nav.logo {
+  display: block;
+  flex-shrink: 0;
+  width: 220px;
+  height: 92px;
+}
+
+.nav-container {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 416px;
+}
+
+.app-nav.button {
+  height: 48px;
+  width: 220px;
+  padding: 12px;
+  margin: 2px 0px;
+  font-size: 16px;
+}
+
+.more-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 1;
+  flex-grow: 2;
+}
+
+.app-nav.button:hover {
+  border: solid rgb(251, 252, 255);
+  border-radius: 24px;
+  background: 48px 220px  rgb(248, 248, 248);;
+}
+
+.app-nav.logo:hover {
+  border: none;
+  background: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex: 1.9;
+}
+
+.header.profile-photo {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#avatar {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 75px;
+}
+
+.header.profile-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.header.profile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-shrink: 3;
+  padding-left: 0;
+  margin: 0;
+}
+
+.header.profile-info li {
+  list-style: none;
+  padding-right: 30px;
+}
+
+.header.button {
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  padding: 7px 16px;
+}
+
+.header.profile-actions span {
+  font-size: 20px;
+  flex: 0.5;
+}
+
+.header.buttons {
+  display: flex;
+  flex-direction: row;
+  flex: 1.8;
+  align-items: end;
+}
+
+.header.profile-actions input[value="Follow"] {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header.profile-actions input[value="Message"] {
+  flex: 0.5;
+  margin-right: 19px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header.kebab {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex: 2;
+}
+
+.header.kebab.dot {
+  width: 4px;
+  height: 4px;
+  font-weight: bold;
+}
+
+.header.profile-bio {
+  flex-grow: 2.5;
+  font-size: 14px;
+}
+
+.header-purpuse {
+  color: rgb(168, 168, 168);
+}
+
+.header.profile-bio h2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.social-links {
+  color: rgb(0, 55, 107);
+}
+
+.header-connections {
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.header-connections.followers {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.highlights li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+  font-size: 12px;
+}
+
+.highlights li img[src^="./images/jesus"] {
+  display: inline-block;
+  width: 77px;
+  height: 77px;
+  margin: 0px 35px 15px 0px;
+  border-radius: 38px;
+}
+
+.brake-line {
+  height: 1px;
+  width: 100%;
+  background: rgb(142, 142, 142);
+}
+
+.profile-nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#posts {
+  margin-right: 60px;
+  border-top: 1px solid rgb(0, 0, 0);
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 293px;
+  gap: 25px;
+  width: 100%;
+
+}
+
+.content img[src^="./images/"] {
+  display: inline-block;
+  max-width: 293px;
+  max-height: 293px;
+  object-fit: cover;
+
+}
