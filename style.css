@@ -34,6 +34,7 @@ header {
 .main-container {
   display: flex;
   justify-content: right;
+  align-self: center;
   width: 935px;
   margin-left: 15%;
 }
@@ -41,15 +42,21 @@ header {
 .app-nav {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 245px;
   height: 100vh;
   padding: 1em 2em 1em 1em;
   border-width: 0;
   background-color: rgb(255, 255, 255);
+  border-right: 1px solid rgb(219, 219, 219);
   color: rgb(0, 0, 0);
+  
 }
 
 .app-nav.logo {
+  border-right: none;
   display: block;
   flex-shrink: 0;
   width: 220px;
@@ -64,6 +71,7 @@ header {
 }
 
 .app-nav.button {
+  border-right: none; /* почему-то оно наследуется потомками*/
   height: 48px;
   width: 220px;
   padding: 12px;
@@ -184,18 +192,23 @@ header {
   font-size: 14px;
 }
 
+.header.profile-bio :first-child {
+  font-weight: 600;
+}
+
 .header-purpuse {
   color: rgb(168, 168, 168);
 }
 
 .header.profile-bio h2 {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
 }
 
 .social-links {
   color: rgb(0, 55, 107);
+  font-weight: 600;
 }
 
 .header-connections {
@@ -210,34 +223,40 @@ header {
   font-weight: 600;
 }
 
+.highlights-container {
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 44px;
+}
+
 .highlights {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
   width: 100%;
 }
 
 .highlights li {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
   list-style: none;
+  min-width: 125px;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .highlights li img[src^="./images/jesus"] {
-  display: inline-block;
+  display: inline-flex;
   width: 77px;
   height: 77px;
-  margin: 0px 35px 15px 0px;
+  margin-bottom: 15px ;
   border-radius: 38px;
 }
 
 .brake-line {
   height: 1px;
   width: 100%;
-  background: rgb(142, 142, 142);
+  background: rgb(219, 219, 219);
 }
 
 .profile-nav {
@@ -262,13 +281,23 @@ header {
   grid-auto-rows: 293px;
   gap: 25px;
   width: 100%;
+}
 
+.content {
+  max-width: 293px;
+  max-height: 293px;
 }
 
 .content img[src^="./images/"] {
   display: inline-block;
-  max-width: 293px;
-  max-height: 293px;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
+/*footer {
+  display: flex;
+  flex-direction: column;
+  height: 134px;
+  width: 100%;
 }
