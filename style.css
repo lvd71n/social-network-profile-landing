@@ -46,14 +46,17 @@ footer {
   justify-content: right;
   align-self: center;
   width: 935px;
-  margin-left: 15%;
+  margin-left: 30%;
   margin-bottom: 30px;
+}
+
+.nav-container {
+  position: fixed;
 }
 
 .app-nav {
   display: flex;
   flex-direction: column;
-  position: sticky;
   top: 0;
   left: 0;
   width: 245px;
@@ -74,7 +77,7 @@ footer {
   height: 92px;
 }
 
-.nav-container {
+.nav-button-container {
   flex-shrink: 0;
   flex-grow: 1;
   width: 100%;
