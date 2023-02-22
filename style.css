@@ -40,33 +40,30 @@ footer {
   color: rgb(142, 142, 142);
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  align-self: center;
-  width: 935px;
-  margin-left: 30%;
-  margin-bottom: 30px;
+.nav-container {
+  flex-basis: 245px;
+  min-height: 100vh;
 }
 
-.nav-container {
+.nav-placeholder {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 245px;
+  min-height: 100%;
 }
 
 .app-nav {
   display: flex;
   flex-direction: column;
-  top: 0;
-  left: 0;
-  width: 245px;
+  align-items: flex-start;
+  width: 100%;
   height: 100vh;
   padding: 1em 2em 1em 1em;
   border-width: 0;
   background-color: rgb(255, 255, 255);
   border-right: 1px solid rgb(219, 219, 219);
   color: rgb(0, 0, 0);
-  
 }
 
 .app-nav.logo {
@@ -78,27 +75,20 @@ footer {
 }
 
 .nav-button-container {
-  flex-shrink: 0;
-  flex-grow: 1;
-  width: 100%;
-  min-height: 416px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  list-style: none;
 }
 
 .app-nav.button {
+  display: block;
   border-right: none; /* почему-то оно наследуется потомками*/
   height: 48px;
-  width: 220px;
+  max-width: 220px;
   padding: 12px;
   margin: 2px 0px;
   font-size: 16px;
-}
-
-.more-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-shrink: 1;
-  flex-grow: 2;
 }
 
 .app-nav.button:hover {
@@ -110,6 +100,15 @@ footer {
 .app-nav.logo:hover {
   border: none;
   background: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 935px;
+  max-width: 935px;
+  margin-bottom: 30px;
 }
 
 .header {
