@@ -40,6 +40,11 @@ footer {
   color: rgb(142, 142, 142);
 }
 
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
 .nav-container {
   flex-basis: 245px;
   min-height: 100vh;
@@ -81,6 +86,7 @@ footer {
 .nav-button-container {
   display: flex;
   flex-direction: column;
+  flex-shrink: 2;
   list-style: none;
   width: 100%;
   padding: 0;
@@ -92,11 +98,14 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-shrink: 2;
   border-right: none; /* почему-то оно наследуется потомками*/
-  height: 56px;
+  height: 48px;
+  margin: 4px 0;
   max-width: 220px;
   padding: 12px;
   font-size: 16px;
+  color: rgb(0, 0, 0);
 }
 
 .nav-placeholder img[src^="./images/"] {
@@ -106,16 +115,17 @@ footer {
   height: 24px;
 }
 
-.nav-button-container .app-nav.button img[src^="./images/"]:last-child {
+.nav-placeholder img[src^="./images/"]:last-child {
   border-radius: 12px;
 }
 
 .app-nav + #more-button {
   display: flex;
   flex-direction: row;
-  flex-grow: 2;
+  flex-grow: 3;
   align-items: end;
   width: 100%;
+  max-height: 100%;
 }
 
 .app-nav + #more-button img {
@@ -125,6 +135,7 @@ footer {
 .app-nav.button:hover {
   border: solid rgb(251, 252, 255);
   border-radius: 24px;
+  border: 0;
   background: 48px 220px  rgb(248, 248, 248);;
 }
 
