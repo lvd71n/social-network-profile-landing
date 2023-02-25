@@ -155,11 +155,11 @@ a {
 .header {
   display: flex;
   flex-direction: column;
-  flex: 1.9;
+  flex-grow: 2;
 }
 
 .header.profile-photo {
-  flex: 1;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
 }
@@ -175,17 +175,9 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   flex-grow: 1;
-  flex-basis: 48px;
+  min-height: 48px;
   align-items: center;
-}
-
-.header.profile-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  padding-left: 0;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .header.button {
@@ -236,8 +228,22 @@ a {
   font-weight: bold;
 }
 
+.header.profile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.header.profile-info span {
+  margin-right: 30px;
+}
+
 .header.profile-bio {
   font-size: 14px;
+  margin: 0;
 }
 
 .header.profile-bio :first-child {
