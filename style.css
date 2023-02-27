@@ -174,9 +174,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   flex-grow: 1;
   min-height: 48px;
-  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -189,43 +189,47 @@ a {
   padding: 7px 16px;
 }
 
-.header.profile-actions span {
+.header.profile-actions > span {
   font-size: 20px;
-  flex: 0.5;
+  flex-grow: 0;
+  flex-shrink: 2;
 }
 
 .header.buttons {
   display: flex;
   flex-direction: row;
-  flex: 1.8;
-  align-items: end;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
-.header.profile-actions input[value="Follow"] {
+.header.buttons button:first-child {
   flex: 1;
-  margin-right: 10px;
+  margin-left: 8px;
+  padding: 7px 16px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.header.profile-actions input[value="Message"] {
-  flex: 0.5;
-  margin-right: 19px;
+.header.buttons button:last-child {
+  flex: 0.75;
+  margin-left: 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
 .header.kebab {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
 }
 
-.header.kebab.dot {
-  width: 4px;
-  height: 4px;
-  font-weight: bold;
+.header.kebab img {
+  width: 32px;
+  height: 32px;
 }
 
 .header.profile-info {
@@ -238,7 +242,12 @@ a {
 }
 
 .header.profile-info span {
-  margin-right: 30px;
+  margin-right: 40px;
+}
+
+.header.profile-info span span {
+  font-weight: 600;
+  margin: 0;
 }
 
 .header.profile-bio {
@@ -246,16 +255,16 @@ a {
   margin: 0;
 }
 
-.header.profile-bio :first-child {
+.header-name {
   font-weight: 600;
 }
 
 .header-purpuse {
   color: rgb(168, 168, 168);
+  font-weight: 400;
 }
 
-.header.profile-bio h2 {
-  font-size: 14px;
+.header-slogan {
   font-weight: 400;
   margin: 0;
 }
@@ -265,14 +274,15 @@ a {
   font-weight: 600;
 }
 
-.header-connections {
+.header.profile-bio.header-connections {
+  display: inline-block;
   color: rgb(168, 168, 168);
   font-size: 12px;
   padding-top: 10px;
   font-weight: 600;
 }
 
-.header-connections.followers {
+.header.profile-bio.header-connections.followers {
   color: rgb(0, 0, 0);
   font-weight: 600;
 }
