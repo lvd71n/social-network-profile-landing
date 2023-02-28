@@ -306,6 +306,7 @@ a {
 .highlights-container {
   width: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
   flex-basis: 130px;
   margin-bottom: 44px;
 }
