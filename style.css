@@ -146,8 +146,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 935px;
-  max-width: 935px;
+  flex-basis: 975px;
+  max-width: 975px;
   padding: 30px 20px 0 20px;
   margin-bottom: 30px;
 }
@@ -162,6 +162,7 @@ a {
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  margin-right: 30px;
 }
 
 #avatar {
@@ -198,33 +199,48 @@ a {
 .header.buttons {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex-grow: 0.2;
   justify-content: flex-start;
   margin-left: 20px;
 }
 
 .header.buttons button:first-child {
+  display: flex;
+  flex-direction: row;
   flex: 1;
   margin-left: 8px;
   padding: 7px 16px;
   font-size: 14px;
   font-weight: 600;
+  font-family: inherit;
+}
+
+.header.buttons button:first-child::after {
+  content: "";
+  display: block;
+  background-image: url(./images/arrow_down.png);
+  background-size: cover;
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
 }
 
 .header.buttons button:last-child {
-  flex: 0.75;
+  flex: 0.7;
   margin-left: 8px;
+  padding: 0 16px;
   font-size: 14px;
   font-weight: 600;
+  font-family: inherit;
 }
 
 .header.kebab {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px;
+  flex-grow: 5;
 }
 
 .header.kebab img {
@@ -278,13 +294,13 @@ a {
   display: inline-block;
   color: rgb(168, 168, 168);
   font-size: 12px;
-  padding-top: 10px;
-  font-weight: 600;
+  padding-top: 6px;
+  font-weight: 500;
 }
 
 .header.profile-bio.header-connections.followers {
   color: rgb(0, 0, 0);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .highlights-container {
