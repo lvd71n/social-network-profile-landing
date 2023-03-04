@@ -337,26 +337,52 @@ a {
   border-radius: 38px;
 }
 
-.brake-line {
-  height: 1px;
-  width: 100%;
-  background: rgb(219, 219, 219);
-}
-
 .profile-nav {
   display: flex;
-  flex-flow: row;
   justify-content: center;
   align-items: center;
-  height: 53px;
+  width: 100%;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
+  border-top: 1px solid rgb(219, 219, 219);
+}
+
+.profile-nav-wrapper {
+  display: flex;
+  height: 53px;
+  letter-spacing: 1px;
 }
 
 #posts {
   margin-right: 60px;
+  border: 0;
   border-top: 1px solid rgb(0, 0, 0);
+}
+
+#posts::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(./images/posts.png);
+  background-size: cover;
+  margin-right: 0.5em;
+}
+
+#tagged {
+  border: 0;
+  color: rgb(142, 142, 142);
+}
+
+#tagged::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(./images/tagged.webp);
+  background-size: cover;
+  margin-right: 0.5em;
 }
 
 .content-container {
